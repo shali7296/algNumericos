@@ -5,7 +5,7 @@
 % tolerancia = input('Ingrese la tolerancia: \n');
 % it_max = input('Coloque una cantidad máxima de iteraciones: ');
 
-function [m,error] = biseccion(funcion,a,b,tolerancia,it_max)
+function m = biseccion(funcion,a,b,tolerancia,it_max)
 funcion=inline(funcion);
 if b > a     
     it = 1;
