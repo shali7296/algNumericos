@@ -29,7 +29,6 @@ if b > a
         end  
         it = it + 1;
     end
-    error = 
     disp('La raíz de esta función es: ');
     disp(m);
 else
