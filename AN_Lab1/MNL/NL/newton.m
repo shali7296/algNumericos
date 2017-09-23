@@ -6,7 +6,9 @@ function [errorAbs,xr] = newton(funcion,xInicial,it_max,tolerancia)
 xr = xInicial;
 it = 1;
 syms x;
-funcionDerivada = diff(funcion,x);
+syms y;
+syms z;
+funcionDerivada = diff(funcion);
 funcion = inline(funcion);
 funcionDerivada = inline(funcionDerivada);
 while it < it_max
@@ -18,7 +20,7 @@ while it < it_max
    else
        disp('Error: ');  
        disp(errorAbs);
-       it = it + 1
+       it = it + 1;
    end    
 end   
 disp('Raiz: ');

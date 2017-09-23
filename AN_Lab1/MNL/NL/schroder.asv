@@ -13,14 +13,10 @@ xOld = xInicial;
 it = 1;
 while it < it_max
     xNew = xOld - ((funcion(xOld)*fd1(xOld))/((fd1(xOld))^2 - (funcion(xOld)*fd2(xOld))));
-    errorAbs = abs(xNew-xOld);
     xOld = xNew;
     disp('xNew es: ');
     disp(xNew)
-    if errorAbs < tolerancia
-        it = it_max;
-    else
-        it = it + 1
-    end
+    if(
+    it = it + 1
 end    
 end
