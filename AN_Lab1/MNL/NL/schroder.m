@@ -2,7 +2,7 @@
 % funcion = input('Ingrese una funcion: ','s');
 % it_max = input('Coloque la máxima cantidad de iteraciones: ');
 
-function xNew = schroder(funcion,xInicial,it_max,tolerancia)
+function xNew = schroder(funcion,fd1,fd2,xInicial,it_max,tolerancia)
 syms x;
 fd1 = diff(funcion,x);
 fd2 = diff(funcion,x,2);

@@ -2,13 +2,13 @@
 % funcion = input('Ingrese una función: ','s');
 % it_max = input('Coloque una cantidad máxima de iteraciones: ');
 
-function [errorAbs,xr] = newton(funcion,xInicial,it_max,tolerancia)
+function [errorAbs,xr] = newton(funcion,funcionDerivada,xInicial,it_max,tolerancia)
 xr = xInicial;
 it = 1;
-syms x;
-syms y;
-syms z;
-funcionDerivada = diff(funcion);
+%syms x;
+%syms y;
+%syms z;
+%funcionDerivada = diff(funcion);
 funcion = inline(funcion);
 funcionDerivada = inline(funcionDerivada);
 while it < it_max
@@ -20,7 +20,7 @@ while it < it_max
    else
        disp('Error: ');  
        disp(errorAbs);
-       it = it + 1;
+       it = it + 1
    end    
 end   
 disp('Raiz: ');

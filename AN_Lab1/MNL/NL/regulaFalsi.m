@@ -6,18 +6,24 @@
 function [error,c] = regulaFalsi(a,b,tolerancia,funcion)
 funcion = inline(funcion);
 c = a;
-while abs(funcion(c))>tolerancia
-   c = b - funcion(b)*((b - a)/(funcion(b) - funcion(a)));
+error = abs(funcion(c));
+while error > tolerancia
+   c = b - funcion(b)*(b - a)/(funcion(b) - funcion(a));
    if funcion(c) == 0
+       disp('Entro1');
        a = c;
        b = c;
-   end
-   if sign(funcion(a)) == sign(funcion(b))
+   else if sign(funcion(a)) == sign(funcion(c))
+       disp('Entro2');
        a = c;
+       else if sign(funcion(b)) == sign(funcion(c))
+       disp('Entro3');
+       b = c
+           end
+       end
    end
-   if sign(funcion(b)) == sign(funcion(c))
-       b = c;
-   end
+   disp(a)
+   disp(b)
    disp('El valor de c es: ');
    disp(c);
    error = abs(funcion(c))
