@@ -19,8 +19,7 @@ df2y = inline(df2y);
 it = 1;
 errorf1 = abs(f1(xOld,yOld));
 errorf2 = abs(f2(xOld,yOld));
-while errorf1 > tolerancia && errorf2 > tolerancia && it <= iteracion
-    %formula de newton
+while (errorf1 > tolerancia || errorf2 > tolerancia) && it <= iteracion
     matriz = [df1x(xOld,yOld) df1y(xOld,yOld); df2x(xOld,yOld) df2y(xOld,yOld)];
     J = inv(matriz);    
     matrizNueva = [xOld; yOld] - (J*[f1(xOld,yOld);f2(xOld,yOld)]);
@@ -30,6 +29,4 @@ while errorf1 > tolerancia && errorf2 > tolerancia && it <= iteracion
     errorf2 = abs(f2(xOld,yOld))
     it = it+1
 end
-% disp('xNew y yNew');
-% disp(matrizNueva);
 end
