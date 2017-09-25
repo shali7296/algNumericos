@@ -1,0 +1,46 @@
+IDEA
+1- Dentro de cada archivo.m esten todos lo que se imprime por pantalla y en el main
+sólo se llama al archivo pero igual debe haber una especie de menú
+1. bisecció
+2. newton, ect
+
+DUDAS:
+- Preguntar si la idea 1 está bien 
+- hay que mostrar los errores y la raíz o sólo la raíz?
+- * como multiplicación preguntar
+- ver como imprimir dos salidas del arreglo
+- funciones pueden entrar como string?
+	Si es así, esta bien
+	Sino: 
+	Cambiar bisección, newton, secante, regulaFalsi, schroder
+- verificar errores de cada método
+
+
+FALTA POR HACER:
+- Definir salidas de cada uno, lo que imprime
+- Borrar los disp innecesarios
+- Error a posteriori y a priori
+- Newton multivariable
+- NLT
+- NLExp
+- Informe (MNL)
+- últimos 3 puntos (Enunciado)
+- Informa (SE)
+- Borrar los comentarios arriba de cada archivo (donde se piden datos)
+
+
+
+LLAMADOS:
+newtonMultivariableTres(0,0,0,100,'x^2+y+0*z-37','x-y^2+0*z-5','x+y+z-3','2*x+0*y+0*z','1+0*x+0*y+0*z','0*x+0*y+0*z','1+0*x+0*y+0*z','-2*y+0*x+0*z','0*x+0*y+0*z','1+0*x+0*y+0*z','1+0*x+0*y+0*z','1+0*x+0*y+0*z',10^-14)
+
+newtonMultivariableDos(1,1,10,'3*x^2-y^2','3*x*y^2-x^3-1','6*x-0*y','-2*y+0*x','3*y^2-3*x^2','6*x*y',10^-14)
+
+regulaFalsi(0,1,10^-14,'x^2+x-1')
+
+schroder('x^2+x-1','2*x+1','2',0,100,10^-14)
+
+secante(0,0.5,100,'x^2+x-1',10^-14)
+
+newton('x^2+x-1','2*x+1',0.5,100,10^-14)
+
+biseccion('x^2+x-1',0,2,10^-14,100)
