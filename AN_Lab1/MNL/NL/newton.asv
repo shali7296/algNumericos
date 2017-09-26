@@ -9,8 +9,7 @@ while it < it_max
    xrOld = xr;
    xr = xrOld - (funcion(xrOld)/funcionDerivada(xrOld));
    errorAbs = abs(xr-xrOld);
-   valorX = [valorX xr];
-   error = [error errorAbs];
+   valorX = [v
    if errorAbs < tolerancia
        it = it_max;
    else

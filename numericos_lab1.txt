@@ -1,11 +1,4 @@
-IDEA
-1- Dentro de cada archivo.m esten todos lo que se imprime por pantalla y en el main
-sólo se llama al archivo pero igual debe haber una especie de menú
-1. bisecció
-2. newton, ect
-
 DUDAS:
-- Preguntar si la idea 1 está bien 
 - hay que mostrar los errores y la raíz o sólo la raíz?
 - ver como imprimir dos salidas del arreglo
 - funciones pueden entrar como string?
