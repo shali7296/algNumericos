@@ -1,26 +1,21 @@
-% xInicial = input('Ingrese un x inicial: ');
-% funcion = input('Ingrese una funcion: ','s');
-% it_max = input('Coloque la máxima cantidad de iteraciones: ');
-
-function xNew = schroder(funcion,fd1,fd2,xInicial,it_max,tolerancia)
-syms x;
-fd1 = diff(funcion,x);
-fd2 = diff(funcion,x,2);
+function [error, valorX] = schroder(funcion,fd1,fd2,xInicial,it_max,tolerancia)
 funcion = inline(funcion);
-fd1 = inline(fd1)
-fd2 = inline(fd2)
+fd1 = inline(fd1);
+fd2 = inline(fd2);
+error = [];
+valorX = [];
 xOld = xInicial;
 it = 1;
 while it < it_max
     xNew = xOld - ((funcion(xOld)*fd1(xOld))/((fd1(xOld))^2 - (funcion(xOld)*fd2(xOld))));
     errorAbs = abs(xNew-xOld);
+    valorX = [valorX xNew];
+    error = [error errorAbs];
     xOld = xNew;
-    disp('xNew es: ');
-    disp(xNew)
     if errorAbs < tolerancia
         it = it_max;
     else
-        it = it + 1
+        it = it + 1;
     end
 end    
 end

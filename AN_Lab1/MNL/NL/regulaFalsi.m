@@ -1,11 +1,9 @@
-% a = input('Ingrese el valor de a: ');
-% b = input('Ingrese el valor de b: ');
-% tolerancia = input('Ingrese la tolerancia: ');
-% funcion = input('Ingrese la función: ','s');
-
-function [error,c] = regulaFalsi(a,b,tolerancia,funcion)
+function [er,valorX] = regulaFalsi(a,b,tolerancia,funcion)
 funcion = inline(funcion);
 c = a;
+it = 0;
+valorX = [];
+er = [];
 error = abs(funcion(c));
 while error > tolerancia
    c = b - funcion(b)*(b - a)/(funcion(b) - funcion(a));
@@ -19,8 +17,9 @@ while error > tolerancia
            end
        end
    end
-   disp('El valor de c es: ');
-   disp(c);
-   error = abs(funcion(c))
+   valorX = [valorX c];
+   er = [er error];
+   it = it + 1;
+   error = abs(funcion(c));
 end    
 end

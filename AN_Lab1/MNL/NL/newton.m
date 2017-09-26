@@ -14,11 +14,7 @@ while it < it_max
    if errorAbs < tolerancia
        it = it_max;
    else
-       disp('Error: ');  
-       disp(errorAbs);
        it = it + 1;
    end    
-end   
-disp('Raiz: ');
-disp(xr);
+end
 end
