@@ -28,7 +28,7 @@ while (errorf1 > tolerancia || errorf2 > tolerancia || errorf3 > tolerancia) && 
     yOld = matrizNueva(2,1);
     zOld = matrizNueva(3,1);
     errorf1 = abs(f1(xOld,yOld,zOld));
-    errorf2 = abs(f2(xOld9,yOld,zOld));
+    errorf2 = abs(f2(xOld,yOld,zOld));
     errorf3 = abs(f3(xOld,yOld,zOld));
     errF1 = [errF1 errorf1];
     errF2 = [errF2 errorf2];
