@@ -10,14 +10,14 @@ DUDAS:
 - valores iniciales que estimar en secante
 
 FALTA POR HACER:
-- Definir salidas de cada uno, lo que imprime
-- Borrar los disp innecesarios
 - Error a posteriori y a priori
 - NLExp
+- Graficos
 - Informe (MNL)
-- últimos 3 puntos (Enunciado)
-- Informa (SE)
-- Borrar los comentarios arriba de cada archivo (donde se piden datos)
+- Métodos 
+- Gráficos
+- Main
+- Informe (SE)
 
 
 
