@@ -9,7 +9,7 @@ while it < it_max
         it = it_max;
     else
         xNew = xActual - ((funcion(xActual)*(xActual-xOld))/d);
-        errorAbs = abs(xNew-xActual);
+        errorAbs = abs((xNew-xActual)/xNew);
         valorX = [valorX xNew];
         error = [error errorAbs];
         xOld = xActual;
