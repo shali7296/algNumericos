@@ -1,7 +1,5 @@
 function [error, valorX] = biseccion(funcion,a,b,tolerancia,it_max)
 funcion=inline(funcion);
-error = [];
-valorX = [];
 if b > a     
     it = 1;
     d = (b-a)/2;
@@ -9,7 +7,7 @@ if b > a
         error = [error d];
         d = (b-a)/2;
         m = a+d;
-        valorX = [valorX m];
+        
         if funcion(m) == 0
             a = m;
             b = m;

@@ -7,21 +7,19 @@ sólo se llama al archivo pero igual debe haber una especie de menú
 DUDAS:
 - Preguntar si la idea 1 está bien 
 - hay que mostrar los errores y la raíz o sólo la raíz?
-- * como multiplicación preguntar
 - ver como imprimir dos salidas del arreglo
 - funciones pueden entrar como string?
 	Si es así, esta bien
 	Sino: 
 	Cambiar bisección, newton, secante, regulaFalsi, schroder
 - verificar errores de cada método
-
+- Justificar los intervalos en mainExpNL
+- valores iniciales que estimar en secante
 
 FALTA POR HACER:
 - Definir salidas de cada uno, lo que imprime
 - Borrar los disp innecesarios
 - Error a posteriori y a priori
-- Newton multivariable
-- NLT
 - NLExp
 - Informe (MNL)
 - últimos 3 puntos (Enunciado)
