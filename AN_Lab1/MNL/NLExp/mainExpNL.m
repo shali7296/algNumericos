@@ -60,6 +60,7 @@ xInicialNMVF = 0;
 yInicialNMVF = 0;
 
 [matrix,errF1,errF2] = newtonMultivariableDos(xInicialNMVF,yInicialNMVF,iteraciones,f1,f2,df1x,df1y,df2x,df2y,toleranciaNMV);
+graficoNMV2('Funcion1',matrix);
 
 %METODOS NEWTON MULTIVARIABLE (3 VARIABLES)
 %FUNCIONES Y SUS DERIVADAS
@@ -82,3 +83,4 @@ yInicialNMVG = 0;
 zInicialNMVG = 0;
 
 [matriz,errG1,errG2] = newtonMultivariableTres(xInicialNMVG,yInicialNMVG,zInicialNMVG,iteraciones,g1,g2,g3,dg1x,dg1y,dg1z,dg2x,dg2y,dg2z,dg3x,dg3y,dg3z,toleranciaNMV);
+graficoNMV3('Funcion2',matriz);
