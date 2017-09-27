@@ -1,6 +1,5 @@
 function [X,paso]=GaussSeidel(A,b,x0,iter)
       X = [];  
-      matriz = [];
       [cols filas]=size(A);
       if cols~=filas
          error('La matriz no es cuadrada');

@@ -1,5 +1,4 @@
 function raiz = LLT(A,b)
-raiz = [];
 [n,m]=size(A);
 C=[A,b];
 if n==m    
@@ -45,10 +44,13 @@ if n==m
         fprintf('\nEl determinante es igual a cero, por lo tanto el sistema tiene infinita o ninguna solucion\n')
     end
 end    
+  fprintf('\n\nLa solucion de X1 hasta Xn es:\n');  
 %a continuacion de utiliza una instruccion for, para mostrar el usuario, 
 %los resultados de una manera mas ordenada
 for i=1:n
     xi=x(1,i);
-    raiz = [raiz xi];
+    raiz = [X xi];
+    fprintf('\nX%g=',i)
+    disp(xi);
 end
 end
