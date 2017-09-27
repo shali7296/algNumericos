@@ -30,7 +30,7 @@ xInicialG = reglaFourier(g,gd1,gd2,ag,bg);
 [errorSeF,valorXSeF] = secante(af,bf,iteraciones,f,toleranciaNL);
 [errorRFF,valorXRFF] = regulaFalsi(af,bf,toleranciaNL,f);
 [errorSCF,valorXSCF] = schroder(f,fd1,fd2,xInicialF,iteraciones,toleranciaNL);
-graficoNL('FuncionF', valorXBiF,valorXNeF,valorXRFF,valorXSeF,valorXSCF);
+crearFiguraNL('Funcion F(x)', valorXBiF,valorXNe,valorXRF,valorXSe,valorXSc)
 
 %ECUACION 2: x^3-7x^2+14x-2 
 [errorBiG,valorXBiG] = biseccion(g,ag,bg,toleranciaNL,iteraciones);
@@ -38,7 +38,6 @@ graficoNL('FuncionF', valorXBiF,valorXNeF,valorXRFF,valorXSeF,valorXSCF);
 [errorSeG,valorXSeG] = secante(ag,bg,iteraciones,g,toleranciaNL);
 [errorRFG,valorXRFG] = regulaFalsi(ag,bg,toleranciaNL,g);
 [errorSCG,valorXSCG] = schroder(g,gd1,gd2,xInicialG,iteraciones,toleranciaNL);
-graficoNL('FuncionG', valorXBiG,valorXNeG,valorXRFG,valorXSeG,valorXSCG);
 
 %METODO NEWTON MULTIVARIABLE (2 variables)
 %FUNCIONES Y SUS DERIVADAS
@@ -81,4 +80,4 @@ xInicialNMVG = 0;
 yInicialNMVG = 0;
 zInicialNMVG = 0;
 
-[matriz,errG1,errG2] = newtonMultivariableTres(xInicialNMVG,yInicialNMVG,zInicialNMVG,iteraciones,g1,g2,g3,dg1x,dg1y,dg1z,dg2x,dg2y,dg2z,dg3x,dg3y,dg3z,toleranciaNMV);
+[matriz,errG1,errG2] = newtonMultivariableTres(xInicialNMVG,yInicialNMVG,zInicialNMVG,iteraciones,g1,g2,g3,dg1x,dg1y,dg1z,dg2x,dg2y,dg2z,dg3x,dg3y,dg3z,toleranciaNMV)

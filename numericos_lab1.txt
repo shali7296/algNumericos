@@ -1,14 +1,3 @@
-DUDAS:
-- hay que mostrar los errores y la raíz o sólo la raíz?
-- ver como imprimir dos salidas del arreglo
-- funciones pueden entrar como string?
-	Si es así, esta bien
-	Sino: 
-	Cambiar bisección, newton, secante, regulaFalsi, schroder
-- verificar errores de cada método
-- Justificar los intervalos en mainExpNL
-- valores iniciales que estimar en secante
-
 FALTA POR HACER:
 - Error a posteriori y a priori
 - NLExp
