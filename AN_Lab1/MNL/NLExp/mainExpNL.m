@@ -31,6 +31,7 @@ xInicialG = reglaFourier(g,gd1,gd2,ag,bg);
 [errorRFF,valorXRFF] = regulaFalsi(af,bf,toleranciaNL,f);
 [errorSCF,valorXSCF] = schroder(f,fd1,fd2,xInicialF,iteraciones,toleranciaNL);
 graficoNL('FuncionF', valorXBiF,valorXNeF,valorXRFF,valorXSeF,valorXSCF);
+graficoErrorNL('FuncionF', errorBiF,errorNeF,errorRFF,errorSeF,errorRFF);
 
 %EXPORTACION DE DATOS EN .mat
 save('AN_Lab1/MNL/NLExp/data/biseccionF.mat','errorBiF','valorXBiF');
@@ -46,6 +47,7 @@ save('AN_Lab1/MNL/NLExp/data/schroderF.mat','errorSCF','valorXSCF');
 [errorRFG,valorXRFG] = regulaFalsi(ag,bg,toleranciaNL,g);
 [errorSCG,valorXSCG] = schroder(g,gd1,gd2,xInicialG,iteraciones,toleranciaNL);
 graficoNL('FuncionG', valorXBiG,valorXNeG,valorXRFG,valorXSeG,valorXSCG);
+graficoErrorNL('FuncionG', errorBiG,errorNeG,errorRFG,errorSeG,errorRFG);
 
 %EXPORTACION DE DATOS EN .mat
 save('AN_Lab1/MNL/NLExp/data/biseccionG.mat','errorBiG','valorXBiG');
@@ -75,6 +77,8 @@ yInicialNMVF = 0;
 
 [matrix,errF1,errF2] = newtonMultivariableDos(xInicialNMVF,yInicialNMVF,iteraciones,f1,f2,df1x,df1y,df2x,df2y,toleranciaNMV);
 graficoNMV2('Funcion1',matrix);
+graficoErrorNMV2('Function1',errF1,errF2);
+
 
 %EXPORTACION DE DATOS EN .mat
 save('AN_Lab1/MNL/NLExp/data/newtonMV2.mat','matrix','errF1','errF2');
@@ -101,6 +105,7 @@ zInicialNMVG = 0;
 
 [matriz,errG1,errG2,errG3] = newtonMultivariableTres(xInicialNMVG,yInicialNMVG,zInicialNMVG,iteraciones,g1,g2,g3,dg1x,dg1y,dg1z,dg2x,dg2y,dg2z,dg3x,dg3y,dg3z,toleranciaNMV);
 graficoNMV3('Funcion2',matriz);
+graficoErrorNMV3('Funcion2',errG1,errG2,errG3);
 
 %EXPORTACION DE DATOS EN .mat
 save('AN_Lab1/MNL/NLExp/data/newtonMV3.mat','matriz','errG1','errG2','errG3');
