@@ -26,18 +26,13 @@ xInicialG = reglaFourier(g,gd1,gd2,ag,bg);
 
 %ECUACIÓN 1: 2x-2^(-x)
 [errorBiF,valorXBiF] = biseccion(f,af,bf,toleranciaNL,iteraciones);
+save('AN_Lab1/MNL/NLExp/data/biseccion.mat','errorBiF','valorXBiF');
 [errorNeF,valorXNeF] = newton(f,fd1,xInicialF,iteraciones,toleranciaNL);
+save('AN_Lab1/MNL/NLExp/data/biseccion.mat','errorBiF','valorXBiF');
 [errorSeF,valorXSeF] = secante(af,bf,iteraciones,f,toleranciaNL);
 [errorRFF,valorXRFF] = regulaFalsi(af,bf,toleranciaNL,f);
 [errorSCF,valorXSCF] = schroder(f,fd1,fd2,xInicialF,iteraciones,toleranciaNL);
 graficoNL('FuncionF', valorXBiF,valorXNeF,valorXRFF,valorXSeF,valorXSCF);
-
-%EXPORTACION DE DATOS EN .mat
-save('AN_Lab1/MNL/NLExp/data/biseccionF.mat','errorBiF','valorXBiF');
-save('AN_Lab1/MNL/NLExp/data/newtonF.mat','errorNeF','valorXNeF');
-save('AN_Lab1/MNL/NLExp/data/secanteF.mat','errorSeF','valorXSeF');
-save('AN_Lab1/MNL/NLExp/data/regulaFalsiF.mat','errorRFF','valorXRFF');
-save('AN_Lab1/MNL/NLExp/data/schroderF.mat','errorSCF','valorXSCF');
 
 %ECUACION 2: x^3-7x^2+14x-2 
 [errorBiG,valorXBiG] = biseccion(g,ag,bg,toleranciaNL,iteraciones);
@@ -46,13 +41,6 @@ save('AN_Lab1/MNL/NLExp/data/schroderF.mat','errorSCF','valorXSCF');
 [errorRFG,valorXRFG] = regulaFalsi(ag,bg,toleranciaNL,g);
 [errorSCG,valorXSCG] = schroder(g,gd1,gd2,xInicialG,iteraciones,toleranciaNL);
 graficoNL('FuncionG', valorXBiG,valorXNeG,valorXRFG,valorXSeG,valorXSCG);
-
-%EXPORTACION DE DATOS EN .mat
-save('AN_Lab1/MNL/NLExp/data/biseccionG.mat','errorBiG','valorXBiG');
-save('AN_Lab1/MNL/NLExp/data/newtonG.mat','errorNeG','valorXNeG');
-save('AN_Lab1/MNL/NLExp/data/secanteG.mat','errorSeG','valorXSeG');
-save('AN_Lab1/MNL/NLExp/data/regulaFalsiG.mat','errorRFG','valorXRFG');
-save('AN_Lab1/MNL/NLExp/data/schroderG.mat','errorSCG','valorXSCG');
 
 %METODO NEWTON MULTIVARIABLE (2 variables)
 %FUNCIONES Y SUS DERIVADAS
@@ -76,9 +64,6 @@ yInicialNMVF = 0;
 [matrix,errF1,errF2] = newtonMultivariableDos(xInicialNMVF,yInicialNMVF,iteraciones,f1,f2,df1x,df1y,df2x,df2y,toleranciaNMV);
 graficoNMV2('Funcion1',matrix);
 
-%EXPORTACION DE DATOS EN .mat
-save('AN_Lab1/MNL/NLExp/data/newtonMV2.mat','matrix','errF1','errF2');
-
 %METODOS NEWTON MULTIVARIABLE (3 VARIABLES)
 %FUNCIONES Y SUS DERIVADAS
 g1 = 'x^2+y+0*z-37';
@@ -99,8 +84,5 @@ xInicialNMVG = 0;
 yInicialNMVG = 0;
 zInicialNMVG = 0;
 
-[matriz,errG1,errG2,errG3] = newtonMultivariableTres(xInicialNMVG,yInicialNMVG,zInicialNMVG,iteraciones,g1,g2,g3,dg1x,dg1y,dg1z,dg2x,dg2y,dg2z,dg3x,dg3y,dg3z,toleranciaNMV);
+[matriz,errG1,errG2] = newtonMultivariableTres(xInicialNMVG,yInicialNMVG,zInicialNMVG,iteraciones,g1,g2,g3,dg1x,dg1y,dg1z,dg2x,dg2y,dg2z,dg3x,dg3y,dg3z,toleranciaNMV);
 graficoNMV3('Funcion2',matriz);
-
-%EXPORTACION DE DATOS EN .mat
-save('AN_Lab1/MNL/NLExp/data/newtonMV3.mat','matriz','errG1','errG2','errG3');
