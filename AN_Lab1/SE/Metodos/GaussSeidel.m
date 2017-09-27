@@ -1,4 +1,4 @@
-function [X,paso]=GaussSeidel(A,b,x0,iter)
+function [X,iteracion]=GaussSeidel(A,b,x0,iter)
       X = [];  
       [cols filas]=size(A);
       if cols~=filas
@@ -23,27 +23,27 @@ function [X,paso]=GaussSeidel(A,b,x0,iter)
                R(k,k)=0;
             end
             fin=0;
-            paso=1;
+            iteracion=1;
             x(1,:)=x0'
-            while (fin==0)&&(paso<iter)
-                X=[X; x(paso,:)];
+            while (fin==0)&&(iteracion<iter)
+                X=[X; x(iteracion,:)];
                for componente=1:cols
                   vectant=0;
                   vectsig=0;
                   for k=1:componente-1
-                     vectant=vectant+A(componente,k)*x(paso+1,k);
+                     vectant=vectant+A(componente,k)*x(iteracion+1,k);
                   end
                   for k=componente+1:cols
-                     vectsig=vectsig+A(componente,k)*x(paso,k);
+                     vectsig=vectsig+A(componente,k)*x(iteracion,k);
                   end
-                  x(paso+1,componente)=(b(componente)-vectant-vectsig)/A(componente,componente);
+                  x(iteracion+1,componente)=(b(componente)-vectant-vectsig)/A(componente,componente);
                end
-               if x(paso,:)==x(paso+1,:)
+               if x(iteracion,:)==x(iteracion+1,:)
                   fin=1;
                end
-               paso=paso+1;
+               iteracion=iteracion+1;
             end
-            X=[X; x(paso,:)];
+            X=[X; x(iteracion,:)];
          end
       end
 end

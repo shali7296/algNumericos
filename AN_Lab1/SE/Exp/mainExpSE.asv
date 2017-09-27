@@ -1,0 +1,33 @@
+% se cargan los datos
+A = load('289x289/A289.dat');
+b = load('289x289/b289.dat');
+p = load('289x289/nodos.dat'); %289x2
+e = load('289x289/fronteras.dat');%64x7
+t = load('289x289/elementos.dat');%512 x 4
+% se trasponen los nodos, frontera y elementos
+p0 = p'; %2x289
+e0 = e';%7x64
+t0 = t';%4 x 512 
+u = linsolve(A,b);
+
+xInicial=zeros(1,289);
+raizGS = GaussSeidel(A,b',xInicial,1000);
+
+raizGJ = GaussJacobi(A,b',xInicial,1000);
+
+raizLU = LU(A,b');
+
+raizLLT = LLT(A,b');
+
+raizQR = QR(A, b);
+
+b = load('289x289/b289.dat');
+p = load('289x289/nodos.dat'); %289x2
+e = load('289x289/fronteras.dat');%64x7
+t = load('289x289/elementos.dat');%512 x 4
+% se trasponen los nodos, frontera y elementos
+p0 = p'; %2x289
+e0 = e';%7x64
+t0 = t';%4 x 512 
+u = linsolve(A,b);
+

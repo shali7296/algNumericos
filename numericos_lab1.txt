@@ -1,13 +1,14 @@
 FALTA POR HACER:
 - Error a posteriori y a priori
-- NLExp
-- Graficos
 - Informe (MNL)
 - Métodos 
 - Gráficos
 - Main
 - Informe (SE)
 
+
+IDEAS:
+Al ser metodos directos, no tienen error ya que su finalidad es obtener el resultado
 
 
 LLAMADOS:
@@ -24,3 +25,13 @@ secante(0,0.5,100,'x^2+x-1',10^-14)
 newton('x^2+x-1','2*x+1',0.5,100,10^-14)
 
 biseccion('x^2+x-1',0,2,10^-14,100)
+
+_-------------------------------------------
+
+LU([10 1 2; 4 6 -1; -2 3 8],[3 9 51])
+
+LLT([10 1 2; 4 6 -1; -2 3 8],[3 9 51])
+
+[matrix,b] = GaussSeidel([10 1 2; 4 6 -1; -2 3 8],[3 9 51], [0 0 0], 100)
+
+[matrix,b] = GaussJacobi([10 1 2; 4 6 -1; -2 3 8],[3 9 51], [0 0 0], 100)

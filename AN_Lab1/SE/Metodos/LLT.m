@@ -1,7 +1,7 @@
 function raiz = LLT(A,b)
 raiz = [];
 [n,m]=size(A);
-C=[A,b];
+
 if n==m    
     for k=1:n
         suma1=0;
@@ -25,8 +25,6 @@ if n==m
             u(k,j)=(A(k,j)-suma3)/L(k,k); %obtencion de la matriz U
         end
     end
-    producto=det(L)*det(u); %calculo del determinante
-    if producto~=0
         for i=1:n
             suma=0;
             for p=1:i-1
@@ -40,15 +38,12 @@ if n==m
                 suma = suma+u(i,p)*x(p);
             end
             x(i)=(z(i)-suma)/u(i,i); % solcion, calculos de las variables
-        end   
-    else
-        fprintf('\nEl determinante es igual a cero, por lo tanto el sistema tiene infinita o ninguna solucion\n')
-    end
+        end
 end    
 %a continuacion de utiliza una instruccion for, para mostrar el usuario, 
 %los resultados de una manera mas ordenada
 for i=1:n
     xi=x(1,i);
-    raiz = [raiz xi];
+    raiz = [raiz; xi];
 end
 end

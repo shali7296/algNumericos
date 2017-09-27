@@ -31,6 +31,7 @@ function raiz = LU(A,b)
             end
          end
       end
-   z = inv(L)*b;
+   matrizB = b';
+   z = inv(L)*matrizB;
    raiz = inv(U)*z;
 end
