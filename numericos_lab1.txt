@@ -1,15 +1,11 @@
 FALTA POR HACER:
 - Error a posteriori y a priori
-- Informe (MNL)
-- Métodos 
 - Gráficos
-- Main
-- Informe (SE)
 
 
 IDEAS:
-Al ser metodos directos, no tienen error ya que su finalidad es obtener el resultado
-
+- Al ser metodos directos, no tienen error ya que su finalidad es obtener el resultado
+- CONCLU: este lab nos enseña cosas porque lo llevamos a la practica gracias a la programación blabla
 
 LLAMADOS:
 newtonMultivariableTres(0,0,0,100,'x^2+y+0*z-37','x-y^2+0*z-5','x+y+z-3','2*x+0*y+0*z','1+0*x+0*y+0*z','0*x+0*y+0*z','1+0*x+0*y+0*z','-2*y+0*x+0*z','0*x+0*y+0*z','1+0*x+0*y+0*z','1+0*x+0*y+0*z','1+0*x+0*y+0*z',10^-14)
